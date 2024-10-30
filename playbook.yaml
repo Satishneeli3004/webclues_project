@@ -1,0 +1,19 @@
+- name: Configure web server
+  hosts: web-servers
+  become: yes
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start and enable nginx service
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Deploy Node.js application
+      copy:
+        src: /app
+        dest: /var/www/html/
