@@ -1,3 +1,4 @@
+---
 - name: Configure web server
   hosts: web-servers
   become: yes
@@ -15,5 +16,5 @@
 
     - name: Deploy Node.js application
       copy:
-        src: /app
-        dest: /var/www/html/
+        src: /app #path to localapp
+        dest: /var/www/html/app
