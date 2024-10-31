@@ -19,7 +19,5 @@ terraform plan
 # creating the resources by applying this command
 terraform apply
 
-# to apply the 
-
 #  to install and configure Nginx and deploy the application.
 ansible-playbook -i inventory.ini playbook.yaml
